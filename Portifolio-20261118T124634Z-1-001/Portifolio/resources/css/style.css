@@ -1,0 +1,382 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(165, 184, 208);
+    background-color: #fff;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    background-color: rgb(165, 184, 208);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: rgb(84, 30, 34);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a.ativo {
+    color: rgb(84, 30, 34);
+    border-bottom: 2px solid rgb(84, 30, 34);
+    padding-bottom: 3px;
+}
+
+/* ===== HERO ===== */
+.hero-wrapper {
+    background-color: rgb(165, 184, 208);
+}
+
+.inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 48px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: #fff;
+}
+
+.apresentacao h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.apresentacao h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.apresentacao h1 span {
+    color: rgb(84, 30, 34);
+}
+
+.apresentacao h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.apresentacao p {
+    color: #ffffff;
+    font-size: 0.97rem;
+    line-height: 1.65;
+    margin-bottom: 36px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: rgb(84, 30, 34);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.botao:hover {
+    background-color: rgb(84, 30, 34);
+    transform: translateY(-2px);
+}
+
+/* Círculo </> */
+.codigo {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 3px solid rgb(84, 30, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: -2px;
+}
+
+/* ===== TÍTULOS DAS SEÇÕES ===== */
+.habilidades h2,
+.projetos h2,
+footer h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: rgb(165, 184, 208);
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+/* palavra roxa com sublinhado */
+.underline {
+    color: rgb(84, 30, 34);
+    position: relative;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(84, 30, 34);
+    border-radius: 2px;
+}
+
+/* ===== HABILIDADES ===== */
+.habilidades {
+    padding: 72px 48px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.badge svg {
+    width: 48px;
+    height: 48px;
+}
+
+.html-badge,
+.css-badge {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.js-badge {
+    background: #f0db4f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.js-badge span {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #1a1a2e;
+}
+
+.habilidade p {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== PROJETOS ===== */
+.projetos {
+    padding: 72px 48px;
+    background-color: #f7f7fb;
+    text-align: center;
+}
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.projeto {
+    background-color: #fff;
+    border: 1px solid #e8e8f0;
+    border-radius: 14px;
+    padding: 26px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    text-align: left;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.projeto:hover {
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.12);
+    transform: translateY(-3px);
+}
+
+.projeto .icone {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background-color: #ede9fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.projeto .icone svg {
+    width: 28px;
+    height: 28px;
+}
+
+.projeto h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #1a1a2e;
+}
+
+.projeto p {
+    font-size: 0.87rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.projeto a {
+    color: rgb(84, 30, 34);
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.projeto a:hover {
+    color: rgb(84, 30, 34);
+    text-decoration: underline;
+}
+
+/* ===== FOOTER / CONTATO ===== */
+footer {
+    background-color: #eeeef5;
+    padding: 64px 48px;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(165, 184, 208);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+.redes a svg {
+    width: 22px;
+    height: 22px;
+}
+
+.redes a:hover {
+    background-color: rgb(84, 30, 34);
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    nav {
+        padding: 16px 24px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 24px 70px;
+    }
+
+    .apresentacao h1 {
+        font-size: 2.4rem;
+    }
+
+    .codigo {
+        width: 150px;
+        height: 150px;
+        font-size: 2.2rem;
+    }
+
+    .habilidades,
+    .projetos,
+    footer {
+        padding: 56px 24px;
+    }
+
+    .lista-habilidades {
+        gap: 32px;
+    }
+}
